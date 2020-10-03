@@ -7,6 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "prettier:write": "npx prettier --write \"src/**/*.{js,ts,json}\"",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -22,8 +23,11 @@
     "@angular/platform-browser-dynamic": "~10.1.3",
     "@angular/router": "~10.1.3",
     "@ngrx/store": "^10.0.0",
+    "prettier": "^2.1.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.3.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
