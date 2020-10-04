@@ -1,0 +1,19 @@
+@use 'sass:list';
+@import 'src/assets/styles/variables';
+
+.container {
+  padding: $app-padding;
+  max-width: app-width(list.nth($sizes, 1));
+  margin: auto;
+}
+
+@each $size in $sizes {
+  $item-index: list.index($sizes, $size);
+  @if($item-index + 1 <= list.length($sizes)) {
+    @media (max-width: app-breakpoint($size)) {
+      .container {
+        max-width: app-width(list.nth($sizes, $item-index + 1));
+      }
+    }
+  }
+}

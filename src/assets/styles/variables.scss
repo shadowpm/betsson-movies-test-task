@@ -1,0 +1,23 @@
+// config
+$sizes:
+  5,
+  4,
+  3,
+  2,
+  1;
+
+// dimensions
+$app-padding: 10px;
+$movie-card-max-width: 180px;
+$movie-card-margin: 5px;
+$movie-card-image-width: $movie-card-max-width + 32px;
+$movie-card-image-height: $movie-card-image-width * 1.5;
+$movie-card-real-width: $movie-card-image-width + $movie-card-margin * 2;
+
+@function app-width($size) {
+  @return max($movie-card-real-width * $size, 300px);
+}
+
+@function app-breakpoint($size) {
+  @return app-width($size) + $app-padding * 2;
+}

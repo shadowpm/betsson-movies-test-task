@@ -1,0 +1,21 @@
+@import 'src/assets/styles/variables';
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  app-movie-card {
+    margin: $movie-card-margin;
+  }
+
+  .mat-spinner {
+    margin: 10px auto;
+
+  }
+}
+
+.load-more-container {
+  text-align: center;
+}
