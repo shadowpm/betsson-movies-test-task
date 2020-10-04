@@ -1,0 +1,10 @@
+$search-field-max-width: 500px;
+
+div {
+  display: flex;
+  justify-content: center;
+}
+.mat-form-field {
+  flex: 1;
+  max-width: $search-field-max-width;
+}

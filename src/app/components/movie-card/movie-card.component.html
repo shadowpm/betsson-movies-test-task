@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ movie.Title }}</mat-card-title>
+    <mat-card-subtitle>{{ movie.Year }} | {{ movie.Type }}</mat-card-subtitle>
+  </mat-card-header>
+  <div mat-card-image [ngStyle]="{ 'background-image': 'url(' + movie.Poster + ')' }"></div>
+  <mat-card-actions>
+    <a mat-button routerLink="/movie/{{ movie.imdbID }}"> See details </a>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,27 @@
+<div *ngIf="movie">
+  <mat-card>
+    <button mat-raised-button color="primary" (click)="goBack()">
+      <mat-icon>arrow_back_ios</mat-icon>
+    </button>
+    <div class="detail-bar-container">
+      <div class="detail-first-line">
+        <mat-card-title class="movie-title">{{ movie.Title }} ({{ movie.Year }})</mat-card-title>
+        <mat-card-subtitle>
+          <mat-icon inline="true" matSuffix>star</mat-icon>
+          {{ movie.imdbRating }} | {{ movie.Genre }}</mat-card-subtitle
+        >
+      </div>
+      <mat-card-subtitle class="movie-title"
+        >{{ movie.Type }} | {{ movie.Runtime }}
+        <mat-icon inline="true" matSuffix>timer</mat-icon>
+      </mat-card-subtitle>
+    </div>
+  </mat-card>
+  <div class="description">
+    <img [src]="movie.Poster" [alt]="movie.Title" />
+    <div>{{ movie.Plot }}</div>
+  </div>
+</div>
+<div class="spinner-container" *ngIf="isFetching$ | async">
+  <mat-spinner></mat-spinner>
+</div>

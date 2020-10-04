@@ -1,0 +1,7 @@
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>Movie name</mat-label>
+    <input matInput placeholder="e.g. God father" #searchBox (input)="search(searchBox.value)" [value]="term" />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</div>

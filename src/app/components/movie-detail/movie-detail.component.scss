@@ -1,0 +1,59 @@
+@import 'src/assets/styles/variables';
+
+.mat-card {
+  display: flex;
+  padding: 0;
+}
+
+.mat-raised-button {
+  border-radius: 4px 0 0 4px;
+}
+
+.detail-bar-container {
+  display: flex;
+  flex: 1;
+  padding: 15px;
+  border-radius: 4px;
+  flex-direction: column;
+}
+.detail-first-line {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+.description {
+  display: flex;
+  padding-top: 20px;
+
+  img {
+    width: 300px;
+    margin: 0 20px 0 0;
+  }
+}
+
+.back-button {
+  display: block;
+  margin: 5px 0;
+}
+.spinner-container {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  .mat-spinner {
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: app-breakpoint(3)) {
+  .description {
+    flex-direction: column;
+    img {
+      margin: 0 auto 10px;
+    }
+  }
+
+  .detail-first-line {
+    flex-direction: column;
+  }
+}

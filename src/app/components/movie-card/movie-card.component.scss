@@ -1,0 +1,22 @@
+@import 'src/assets/styles/variables';
+
+.mat-card {
+  max-width: $movie-card-max-width;
+}
+
+.mat-card-image {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: $movie-card-image-width;
+  height: $movie-card-image-height;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.mat-card-title {
+  display: block;
+  max-width: $movie-card-max-width;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
